@@ -1,0 +1,28 @@
+int n;
+int bj[11], result[11];
+
+void write(int now)
+{
+    int i;
+    if (now == n + 1) {
+        for (i = 1; i <= n; i = i + 1) printf(result[i]);
+        printf("\n");
+        return;
+    }
+    else {
+        for (i = 1; i <= n; i = i + 1) {
+            if (bj[i] == 0) {
+                result[now] = i;
+                bj[i] = 1;
+                write(now + 1);
+                bj[i] = 0;
+            }
+        }
+    }
+}
+
+void main()
+{
+    scanf(n);
+    write(1);
+}

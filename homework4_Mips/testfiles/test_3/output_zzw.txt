@@ -1,0 +1,311 @@
+const char aa = 'c'
+const char bb = 'c'
+var int a
+var int b
+var int c
+var int d
+
+int add()
+para int num1
+para int num2
++         num1      num2      t0
++         t0        num1      t1
+Return    t1
+Return    -1
+
+void fun2()
+para int num3
+const int funa = 1
+var int funb[10]
+*         2         3         t0
+[]        funb      3         t1
+-         1         t1        t2
+*         t2        num3      t3
+[]=       t3        t0        funb
+Return
+
+void main()
+=         1                   a
+=         2                   b
+=         a                   t0
+Push      t0
+=         b                   t1
+Push      t1
+Call      add
+RetValue  t2
+=         a                   t3
+*         t2        t3        t4
+=         t4                  c
+=         1                   a
+Label_0
+=         a                   t5
+<         t5        10        t6
+BNZ       t6        Label_1
+=         a                   t7
+=         t7                  b
++         a         1         a
+Goto      Label_0
+Label_1
+Label_2
+=         1                   a
+=         a                   t8
+!=        t8        1         t9
+BZ        t9        Label_2
+=         a                   t10
+>=        t10       10        t11
+BNZ       t11       Label_3
+=         2                   a
+Goto      Label_4
+Label_3
+=         1                   a
+Label_4
+Scanf     a
+Scanf     b
+Scanf     c
+Scanf     d
+=         c                   t12
+Printf    string0   t12
+
+
+
+.data
+                string0:        .asciiz "c = "
+                nextline:       .asciiz "\n"
+.text
+        move    $s7     $sp
+        subi    $sp     $sp     4
+        subi    $sp     $sp     4
+        subi    $sp     $sp     4
+        subi    $sp     $sp     4
+        move    $fp     $sp
+        subi    $sp     $sp     60
+        jal     main
+        j       end
+add:
+        subi    $t0     $fp     0
+        lw      $t1     0($t0)
+        subi    $t2     $fp     4
+        lw      $t3     0($t2)
+        subi    $t4     $fp     16
+        addu    $t5     $t1     $t3
+        sw      $t5     0($t4)
+        subi    $t0     $fp     16
+        lw      $t1     0($t0)
+        subi    $t2     $fp     0
+        lw      $t3     0($t2)
+        subi    $t4     $fp     20
+        addu    $t5     $t1     $t3
+        sw      $t5     0($t4)
+
+###### Return   t1
+        subi    $t0     $fp     20
+        lw      $v1     0($t0)
+        move    $sp     $fp
+        subi    $t3     $fp     8
+        lw      $t4     0($t3)
+        move    $fp     $t4
+        jr      $ra
+
+###### Return   -1
+        li      $v1     -1
+        move    $sp     $fp
+        subi    $t3     $fp     8
+        lw      $t4     0($t3)
+        move    $fp     $t4
+        jr      $ra
+fun2:
+        li      $t1     2
+        li      $t3     3
+        subi    $t4     $fp     52
+        mult    $t1     $t3
+        mflo    $t5
+        sw      $t5     0($t4)
+        li      $t1     3
+        sll     $t1     $t1     2
+        subi    $t2     $fp     12
+        subu    $t2     $t2     $t1
+        lw      $t3     0($t2)
+        subi    $t4     $fp     56
+        sw      $t3     0($t4)
+        li      $t1     1
+        subi    $t2     $fp     56
+        lw      $t3     0($t2)
+        subi    $t4     $fp     60
+        subu    $t5     $t1     $t3
+        sw      $t5     0($t4)
+        subi    $t0     $fp     60
+        lw      $t1     0($t0)
+        subi    $t2     $fp     0
+        lw      $t3     0($t2)
+        subi    $t4     $fp     64
+        mult    $t1     $t3
+        mflo    $t5
+        sw      $t5     0($t4)
+        subi    $t0     $fp     64
+        lw      $t1     0($t0)
+        subi    $t2     $fp     52
+        lw      $t3     0($t2)
+        sll     $t3     $t3     2
+        subi    $t4     $fp     12
+        subu    $t4     $t4     $t3
+        sw      $t1     0($t4)
+        move    $sp     $fp
+        subi    $t3     $fp     4
+        lw      $t4     0($t3)
+        move    $fp     $t4
+        jr      $ra
+main:
+        li      $t1     1
+        subi    $t2     $s7     0
+        sw      $t1     0($t2)
+        li      $t1     2
+        subi    $t2     $s7     4
+        sw      $t1     0($t2)
+        subi    $t0     $s7     0
+        lw      $t1     0($t0)
+        subi    $t2     $fp     8
+        sw      $t1     0($t2)
+
+###### Push     t0
+        subi    $t0     $fp     8
+        lw      $t1     0($t0)
+        sw      $t1     0($sp)
+        subi    $sp     $sp     4
+        subi    $t0     $s7     4
+        lw      $t1     0($t0)
+        subi    $t2     $fp     12
+        sw      $t1     0($t2)
+
+###### Push     t1
+        subi    $t0     $fp     12
+        lw      $t1     0($t0)
+        sw      $t1     0($sp)
+        subi    $sp     $sp     4
+
+###### Call     add
+        sw      $fp     0($sp)
+        subi    $t1     $fp     4
+        sw      $ra     0($t1)
+        addi    $fp     $sp     8
+        subi    $sp     $sp     16
+        jal     add
+        subi    $t2     $fp     4
+        lw      $t3     0($t2)
+        move    $ra     $t3
+        subi    $t0     $fp     16
+        sw      $v1     0($t0)
+        subi    $t0     $s7     0
+        lw      $t1     0($t0)
+        subi    $t2     $fp     20
+        sw      $t1     0($t2)
+        subi    $t0     $fp     16
+        lw      $t1     0($t0)
+        subi    $t2     $fp     20
+        lw      $t3     0($t2)
+        subi    $t4     $fp     24
+        mult    $t1     $t3
+        mflo    $t5
+        sw      $t5     0($t4)
+        subi    $t0     $fp     24
+        lw      $t1     0($t0)
+        subi    $t2     $s7     8
+        sw      $t1     0($t2)
+        li      $t1     1
+        subi    $t2     $s7     0
+        sw      $t1     0($t2)
+Label0:
+        subi    $t0     $s7     0
+        lw      $t1     0($t0)
+        subi    $t2     $fp     28
+        sw      $t1     0($t2)
+        subi    $t0     $fp     28
+        lw      $t8     0($t0)
+        li      $t9     10
+        subu    $t7     $t8     $t9
+        BGEZ    $t7     Label1
+        subi    $t0     $s7     0
+        lw      $t1     0($t0)
+        subi    $t2     $fp     36
+        sw      $t1     0($t2)
+        subi    $t0     $fp     36
+        lw      $t1     0($t0)
+        subi    $t2     $s7     4
+        sw      $t1     0($t2)
+        subi    $t0     $s7     0
+        lw      $t1     0($t0)
+        li      $t3     1
+        subi    $t4     $s7     0
+        addu    $t5     $t1     $t3
+        sw      $t5     0($t4)
+        j       Label0
+Label1:
+Label2:
+        li      $t1     1
+        subi    $t2     $s7     0
+        sw      $t1     0($t2)
+        subi    $t0     $s7     0
+        lw      $t1     0($t0)
+        subi    $t2     $fp     40
+        sw      $t1     0($t2)
+        subi    $t0     $fp     40
+        lw      $t8     0($t0)
+        li      $t9     1
+        BNE     $t8     $t9     Label2
+        subi    $t0     $s7     0
+        lw      $t1     0($t0)
+        subi    $t2     $fp     48
+        sw      $t1     0($t2)
+        subi    $t0     $fp     48
+        lw      $t8     0($t0)
+        li      $t9     10
+        subu    $t7     $t8     $t9
+        BLTZ    $t7     Label3
+        li      $t1     2
+        subi    $t2     $s7     0
+        sw      $t1     0($t2)
+        j       Label4
+Label3:
+        li      $t1     1
+        subi    $t2     $s7     0
+        sw      $t1     0($t2)
+Label4:
+
+###### scanf    a
+        subi    $t0     $s7     0
+        li      $v0     5
+        syscall
+        sw      $v0     0($t0)
+
+###### scanf    b
+        subi    $t0     $s7     4
+        li      $v0     5
+        syscall
+        sw      $v0     0($t0)
+
+###### scanf    c
+        subi    $t0     $s7     8
+        li      $v0     5
+        syscall
+        sw      $v0     0($t0)
+
+###### scanf    d
+        subi    $t0     $s7     12
+        li      $v0     5
+        syscall
+        sw      $v0     0($t0)
+        subi    $t0     $s7     8
+        lw      $t1     0($t0)
+        subi    $t2     $fp     56
+        sw      $t1     0($t2)
+        li      $v0     4
+        la      $a0     string0
+        syscall
+        li      $v0     1
+        subi    $t0     $fp     56
+        lw      $a0     0($t0)
+        syscall
+        li      $v0     4
+        la      $a0     nextline
+        syscall
+end:
+174

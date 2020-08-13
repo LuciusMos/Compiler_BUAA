@@ -1,0 +1,213 @@
+VOIDTK void
+IDENFR n12_ext
+LPARENT (
+INTTK int
+IDENFR xyz2i_
+COMMA ,
+CHARTK char
+IDENFR Qi_12
+<参数�?
+RPARENT )
+LBRACE {
+CONSTTK const
+CHARTK char
+IDENFR m
+ASSIGN =
+CHARCON 0
+<常量定义>
+SEMICN ;
+<常量说明>
+IFTK if
+LPARENT (
+IDENFR Qi_12
+<因子>
+<�?
+MINU -
+IDENFR m
+<因子>
+<�?
+<表达�?
+EQL ==
+IDENFR xyz2i_
+<因子>
+<�?
+<表达�?
+<条件>
+RPARENT )
+LBRACE {
+PRINTFTK printf
+LPARENT (
+STRCON ascii number is true! show me another to judge~\n
+<字符�?
+RPARENT )
+<写语�?
+SEMICN ;
+<语句>
+RETURNTK return
+<返回语句>
+SEMICN ;
+<语句>
+<语句�?
+RBRACE }
+<语句>
+ELSETK else
+SCANFTK scanf
+LPARENT (
+IDENFR Qi_12
+COMMA ,
+IDENFR xyz2i_
+RPARENT )
+<读语�?
+SEMICN ;
+<语句>
+<条件语句>
+<语句>
+<语句�?
+<复合语句>
+RBRACE }
+<无返回值函数定�?
+VOIDTK void
+MAINTK main
+LPARENT (
+RPARENT )
+LBRACE {
+CONSTTK const
+INTTK int
+IDENFR _myr
+ASSIGN =
+INTCON 0
+<无符号整�?
+<整数>
+COMMA ,
+IDENFR QWE_wer
+ASSIGN =
+MINU -
+INTCON 10
+<无符号整�?
+<整数>
+COMMA ,
+IDENFR we2two
+ASSIGN =
+PLUS +
+INTCON 128
+<无符号整�?
+<整数>
+COMMA ,
+IDENFR mpoUML123
+ASSIGN =
+INTCON 5
+<无符号整�?
+<整数>
+<常量定义>
+SEMICN ;
+CONSTTK const
+CHARTK char
+IDENFR IJK_123mlo
+ASSIGN =
+CHARCON a
+COMMA ,
+IDENFR ujkOPQ123_
+ASSIGN =
+CHARCON _
+COMMA ,
+IDENFR same2we_IOP
+ASSIGN =
+CHARCON +
+<常量定义>
+SEMICN ;
+<常量说明>
+IDENFR n12_ext
+LPARENT (
+IDENFR _myr
+<因子>
+<�?
+<表达�?
+COMMA ,
+IDENFR IJK_123mlo
+<因子>
+<�?
+<表达�?
+<值参数表>
+RPARENT )
+<无返回值函数调用语�?
+SEMICN ;
+<语句>
+IDENFR n12_ext
+LPARENT (
+INTCON 10
+<无符号整�?
+<整数>
+<因子>
+<�?
+<表达�?
+COMMA ,
+IDENFR IJK_123mlo
+<因子>
+<�?
+<表达�?
+<值参数表>
+RPARENT )
+<无返回值函数调用语�?
+SEMICN ;
+<语句>
+IDENFR n12_ext
+LPARENT (
+LPARENT (
+INTCON 3
+<无符号整�?
+<整数>
+<因子>
+<�?
+PLUS +
+INTCON 3
+<无符号整�?
+<整数>
+<因子>
+<�?
+<表达�?
+RPARENT )
+<因子>
+<�?
+<表达�?
+COMMA ,
+IDENFR same2we_IOP
+<因子>
+<�?
+<表达�?
+<值参数表>
+RPARENT )
+<无返回值函数调用语�?
+SEMICN ;
+<语句>
+IDENFR n12_ext
+LPARENT (
+IDENFR we2two
+<因子>
+<�?
+MINU -
+IDENFR QWE_wer
+<因子>
+MULT *
+IDENFR mpoUML123
+<因子>
+<�?
+<表达�?
+COMMA ,
+IDENFR ujkOPQ123_
+<因子>
+<�?
+<表达�?
+<值参数表>
+RPARENT )
+<无返回值函数调用语�?
+SEMICN ;
+<语句>
+RETURNTK return
+<返回语句>
+SEMICN ;
+<语句>
+<语句�?
+<复合语句>
+RBRACE }
+<主函�?
+<程序>

@@ -1,0 +1,1848 @@
+----------Block 0-----------
+---begin: hanoi
+---next:  if_0_end
+---DEF: to, 
+---USE: 
+---IN:  FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---OUT: FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, to, 
+---prev: 
+---follow: 1, 3, 
+func hanoi()
+para in func: n
+para in func: from
+para in func: tmp
+para in func: to
+ble		n		0		if_0_end
+
+----------Block 1-----------
+---begin: 
+---next:  hanoi
+---DEF: 
+---USE: to, 
+---IN:  FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, to, 
+---OUT: FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---prev: 
+---follow: 0, 
+-		n		1		~0
+protect env
+push ~0
+push from
+push to
+push tmp
+call hanoi
+
+----------Block 2-----------
+---begin: 
+---next:  hanoi
+---DEF: 
+---USE: to, 
+---IN:  FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, to, 
+---OUT: FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---prev: 
+---follow: 0, 
+printf string0
+printf newline
+printf n
+printf newline
+printf string1
+printf newline
+printf from
+printf newline
+printf string2
+printf newline
+printf to
+printf newline
+-		n		1		~1
+protect env
+push ~1
+push tmp
+push from
+push to
+call hanoi
+
+----------Block 3-----------
+---begin: if_0_end
+---next:  @hanoi
+---DEF: 
+---USE: 
+---IN:  FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, to, 
+---OUT: FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, to, 
+---prev: 
+---follow: 2, 3, 109, 
+Label if_0_end
+func hanoi -> NonRetreturn
+
+----------Block 4-----------
+---begin: 
+---next:  @hanoi
+---DEF: 
+---USE: 
+---IN:  FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, to, 
+---OUT: FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, to, 
+---prev: 
+---follow: 2, 3, 109, 
+func hanoi -> NonRetreturn
+
+----------Block 5-----------
+---begin: Fibonacci
+---next:  if_1_end
+---DEF: 
+---USE: 
+---IN:  FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---OUT: FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---prev: 
+---follow: 6, 7, 
+func Fibonacci()
+para in func: n
+bne		n		0		if_1_end
+
+----------Block 6-----------
+---begin: 
+---next:  @Fibonacci
+---DEF: 
+---USE: 
+---IN:  FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---OUT: FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---prev: 
+---follow: 10, 11, 48, 56, 57, 58, 102, 103, 104, 106, 107, 
+func Fibonacci -> Retreturn  retValue:0
+
+----------Block 7-----------
+---begin: if_1_end
+---next:  if_2_end
+---DEF: 
+---USE: 
+---IN:  FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---OUT: FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---prev: 
+---follow: 8, 9, 
+Label if_1_end
+bne		n		1		if_2_end
+
+----------Block 8-----------
+---begin: 
+---next:  @Fibonacci
+---DEF: 
+---USE: 
+---IN:  FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---OUT: FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---prev: 
+---follow: 10, 11, 48, 56, 57, 58, 102, 103, 104, 106, 107, 
+func Fibonacci -> Retreturn  retValue:1
+
+----------Block 9-----------
+---begin: if_2_end
+---next:  Fibonacci
+---DEF: 
+---USE: 
+---IN:  FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---OUT: FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---prev: 
+---follow: 5, 
+Label if_2_end
+-		n		1		~2
+protect env
+push ~2
+call Fibonacci
+
+----------Block 10-----------
+---begin: 
+---next:  Fibonacci
+---DEF: FunRet_~3, 
+---USE: 
+---IN:  FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---OUT: FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---prev: 
+---follow: 5, 
+FunRet_~3 = retValue
+-		n		2		~4
+protect env
+push ~4
+call Fibonacci
+
+----------Block 11-----------
+---begin: 
+---next:  @Fibonacci
+---DEF: FunRet_~5, 
+---USE: FunRet_~3, 
+---IN:  FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---OUT: FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---prev: 
+---follow: 10, 11, 48, 56, 57, 58, 102, 103, 104, 106, 107, 
+FunRet_~5 = retValue
++		FunRet_~3		FunRet_~5		~6
+func Fibonacci -> Retreturn  retValue:~6
+
+----------Block 12-----------
+---begin: fac
+---next:  if_3_end
+---DEF: 
+---USE: 
+---IN:  FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---OUT: FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---prev: 
+---follow: 13, 14, 
+func fac()
+para in func: n
+bne		n		1		if_3_end
+
+----------Block 13-----------
+---begin: 
+---next:  @fac
+---DEF: 
+---USE: 
+---IN:  FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---OUT: FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---prev: 
+---follow: 15, 46, 47, 59, 60, 61, 62, 100, 101, 105, 108, 
+func fac -> Retreturn  retValue:1
+
+----------Block 14-----------
+---begin: if_3_end
+---next:  fac
+---DEF: 
+---USE: 
+---IN:  FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---OUT: FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---prev: 
+---follow: 12, 
+Label if_3_end
+-		n		1		~7
+protect env
+push ~7
+call fac
+
+----------Block 15-----------
+---begin: 
+---next:  @fac
+---DEF: FunRet_~8, 
+---USE: 
+---IN:  FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---OUT: FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---prev: 
+---follow: 15, 46, 47, 59, 60, 61, 62, 100, 101, 105, 108, 
+FunRet_~8 = retValue
+*		n		FunRet_~8		~9
+func fac -> Retreturn  retValue:~9
+
+----------Block 16-----------
+---begin: initGlobalArray
+---next:  @initGlobalArray
+---DEF: 
+---USE: 
+---IN:  FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---OUT: FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---prev: 
+---follow: 27, 
+func initGlobalArray()
+[]=		0		0		global_int_array_1
+[]=		1		1		global_int_array_1
+=[]		global_int_array_1		0		~10
+=[]		global_int_array_1		1		~11
++		~10		~11		~11
+[]=		~11		2		global_int_array_1
+=[]		global_int_array_1		2		~12
+=[]		global_int_array_1		1		~13
++		~12		~13		~13
+[]=		~13		3		global_int_array_1
+=[]		global_int_array_1		3		~14
+=[]		global_int_array_1		2		~15
++		~14		~15		~15
+[]=		~15		4		global_int_array_1
+=[]		global_int_array_1		1		~16
+[]=		~16		0		global_int_array_2
+=[]		global_int_array_2		0		~17
+=[]		global_int_array_1		2		~18
+*		~17		~18		~18
+[]=		~18		1		global_int_array_2
+=[]		global_int_array_2		1		~19
+=[]		global_int_array_1		3		~20
+*		~19		~20		~20
+[]=		~20		2		global_int_array_2
+=[]		global_int_array_2		2		~21
+=[]		global_int_array_1		4		~22
+*		~21		~22		~22
+[]=		~22		3		global_int_array_2
+=[]		global_int_array_2		3		~23
+=[]		global_int_array_1		4		~24
+/		~23		~24		~24
+[]=		~24		4		global_int_array_2
+[]=		'a'		0		global_char_array_1
+[]=		'A'		1		global_char_array_1
+[]=		'z'		2		global_char_array_1
+[]=		'Z'		3		global_char_array_1
+[]=		'_'		4		global_char_array_1
+[]=		'+'		0		global_char_array_2
+[]=		'-'		1		global_char_array_2
+[]=		'*'		2		global_char_array_2
+[]=		'/'		3		global_char_array_2
+[]=		'6'		4		global_char_array_2
+func initGlobalArray -> NonRetreturn
+
+----------Block 17-----------
+---begin: 
+---next:  @initGlobalArray
+---DEF: 
+---USE: 
+---IN:  FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---OUT: FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---prev: 
+---follow: 27, 
+func initGlobalArray -> NonRetreturn
+
+----------Block 18-----------
+---begin: assignGlobal
+---next:  @assignGlobal
+---DEF: d, 
+---USE: 
+---IN:  FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---OUT: FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---prev: 
+---follow: 28, 
+func assignGlobal()
+para in func: a
+para in func: b
+para in func: c
+para in func: d
+=		a		global_int_1
+=		b		global_char_1
+=		c		global_int_2
+=		d		global_char_2
+func assignGlobal -> NonRetreturn
+
+----------Block 19-----------
+---begin: 
+---next:  @assignGlobal
+---DEF: 
+---USE: 
+---IN:  FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---OUT: FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---prev: 
+---follow: 28, 
+func assignGlobal -> NonRetreturn
+
+----------Block 20-----------
+---begin: printGlobalConst
+---next:  @printGlobalConst
+---DEF: 
+---USE: 
+---IN:  FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---OUT: FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---prev: 
+---follow: 29, 
+func printGlobalConst()
+printf 12345679
+printf newline
+printf 0
+printf newline
+printf 0
+printf newline
+printf -12345679
+printf newline
+printf '9'
+printf newline
+printf '_'
+printf newline
+printf '+'
+printf newline
+printf '*'
+printf newline
+func printGlobalConst -> NonRetreturn
+
+----------Block 21-----------
+---begin: 
+---next:  @printGlobalConst
+---DEF: 
+---USE: 
+---IN:  FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---OUT: FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---prev: 
+---follow: 29, 
+func printGlobalConst -> NonRetreturn
+
+----------Block 22-----------
+---begin: printGlobalVar
+---next:  @printGlobalVar
+---DEF: 
+---USE: 
+---IN:  FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---OUT: FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---prev: 
+---follow: 30, 
+func printGlobalVar()
+printf global_int_1
+printf newline
+printf global_int_2
+printf newline
+printf global_char_1
+printf newline
+printf global_char_2
+printf newline
+func printGlobalVar -> NonRetreturn
+
+----------Block 23-----------
+---begin: 
+---next:  @printGlobalVar
+---DEF: 
+---USE: 
+---IN:  FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---OUT: FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---prev: 
+---follow: 30, 
+func printGlobalVar -> NonRetreturn
+
+----------Block 24-----------
+---begin: printGlobalArray
+---next:  @printGlobalArray
+---DEF: 
+---USE: 
+---IN:  FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---OUT: FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---prev: 
+---follow: 31, 
+func printGlobalArray()
+=[]		global_int_array_1		0		~25
+printf ~25
+printf newline
+=[]		global_int_array_1		1		~26
+printf ~26
+printf newline
+=[]		global_int_array_1		2		~27
+printf ~27
+printf newline
+=[]		global_int_array_1		3		~28
+printf ~28
+printf newline
+=[]		global_int_array_1		4		~29
+printf ~29
+printf newline
+=[]		global_int_array_2		0		~30
+printf ~30
+printf newline
+=[]		global_int_array_2		1		~31
+printf ~31
+printf newline
+=[]		global_int_array_2		2		~32
+printf ~32
+printf newline
+=[]		global_int_array_2		3		~33
+printf ~33
+printf newline
+=[]		global_int_array_2		4		~34
+printf ~34
+printf newline
+=[]		global_char_array_1		0		~35
+printf ~35
+printf newline
+=[]		global_char_array_1		1		~36
+printf ~36
+printf newline
+=[]		global_char_array_1		2		~37
+printf ~37
+printf newline
+=[]		global_char_array_1		3		~38
+printf ~38
+printf newline
+=[]		global_char_array_1		4		~39
+printf ~39
+printf newline
+=[]		global_char_array_2		0		~40
+printf ~40
+printf newline
+=[]		global_char_array_2		1		~41
+printf ~41
+printf newline
+=[]		global_char_array_2		2		~42
+printf ~42
+printf newline
+=[]		global_char_array_2		3		~43
+printf ~43
+printf newline
+=[]		global_char_array_2		4		~44
+printf ~44
+printf newline
+func printGlobalArray -> NonRetreturn
+
+----------Block 25-----------
+---begin: 
+---next:  @printGlobalArray
+---DEF: 
+---USE: 
+---IN:  FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---OUT: FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---prev: 
+---follow: 31, 
+func printGlobalArray -> NonRetreturn
+
+----------Block 26-----------
+---begin: testGlobal
+---next:  initGlobalArray
+---DEF: 
+---USE: 
+---IN:  FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---OUT: FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---prev: 
+---follow: 16, 
+func testGlobal()
+call initGlobalArray
+
+----------Block 27-----------
+---begin: 
+---next:  assignGlobal
+---DEF: 
+---USE: 
+---IN:  FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---OUT: FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---prev: 
+---follow: 18, 
+protect env
+push 12345679
+push '9'
+push -12345679
+push '*'
+call assignGlobal
+
+----------Block 28-----------
+---begin: 
+---next:  printGlobalConst
+---DEF: 
+---USE: 
+---IN:  FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---OUT: FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---prev: 
+---follow: 20, 
+call printGlobalConst
+
+----------Block 29-----------
+---begin: 
+---next:  printGlobalVar
+---DEF: 
+---USE: 
+---IN:  FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---OUT: FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---prev: 
+---follow: 22, 
+call printGlobalVar
+
+----------Block 30-----------
+---begin: 
+---next:  printGlobalArray
+---DEF: 
+---USE: 
+---IN:  FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---OUT: FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---prev: 
+---follow: 24, 
+call printGlobalArray
+
+----------Block 31-----------
+---begin: 
+---next:  @testGlobal
+---DEF: 
+---USE: 
+---IN:  FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---OUT: FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---prev: 
+---follow: 113, 
+func testGlobal -> NonRetreturn
+
+----------Block 32-----------
+---begin: 
+---next:  @testGlobal
+---DEF: 
+---USE: 
+---IN:  FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---OUT: FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---prev: 
+---follow: 113, 
+func testGlobal -> NonRetreturn
+
+----------Block 33-----------
+---begin: testReturnInt
+---next:  @testReturnInt
+---DEF: 
+---USE: 
+---IN:  FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---OUT: FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---prev: 
+---follow: 49, 63, 64, 65, 66, 68, 70, 71, 
+func testReturnInt()
+para in func: a
++		a		1		~45
+func testReturnInt -> Retreturn  retValue:~45
+
+----------Block 34-----------
+---begin: testReturnChar
+---next:  if_4_end
+---DEF: 
+---USE: 
+---IN:  FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---OUT: FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---prev: 
+---follow: 35, 37, 
+func testReturnChar()
+para in func: a
+bne		a		1		if_4_end
+
+----------Block 35-----------
+---begin: 
+---next:  @testReturnChar
+---DEF: 
+---USE: 
+---IN:  FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---OUT: FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---prev: 
+---follow: 50, 51, 52, 53, 67, 69, 
+func testReturnChar -> Retreturn  retValue:'a'
+
+----------Block 36-----------
+---begin: 
+---next:  else_4_end
+---DEF: 
+---USE: 
+---IN:  FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---OUT: FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---prev: 
+---follow: 44, 
+j else_4_end
+
+----------Block 37-----------
+---begin: if_4_end
+---next:  if_5_end
+---DEF: 
+---USE: 
+---IN:  FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---OUT: FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---prev: 
+---follow: 38, 40, 
+Label if_4_end
+bne		a		2		if_5_end
+
+----------Block 38-----------
+---begin: 
+---next:  @testReturnChar
+---DEF: 
+---USE: 
+---IN:  FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---OUT: FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---prev: 
+---follow: 50, 51, 52, 53, 67, 69, 
+func testReturnChar -> Retreturn  retValue:'b'
+
+----------Block 39-----------
+---begin: 
+---next:  else_5_end
+---DEF: 
+---USE: 
+---IN:  FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---OUT: FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---prev: 
+---follow: 43, 
+j else_5_end
+
+----------Block 40-----------
+---begin: if_5_end
+---next:  if_6_end
+---DEF: 
+---USE: 
+---IN:  FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---OUT: FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---prev: 
+---follow: 41, 42, 
+Label if_5_end
+bne		a		3		if_6_end
+
+----------Block 41-----------
+---begin: 
+---next:  @testReturnChar
+---DEF: 
+---USE: 
+---IN:  FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---OUT: FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---prev: 
+---follow: 50, 51, 52, 53, 67, 69, 
+func testReturnChar -> Retreturn  retValue:'c'
+
+----------Block 42-----------
+---begin: if_6_end
+---next:  
+---DEF: 
+---USE: 
+---IN:  FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---OUT: FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---prev: 
+---follow: 43, 
+Label if_6_end
+
+----------Block 43-----------
+---begin: else_5_end
+---next:  
+---DEF: 
+---USE: 
+---IN:  FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---OUT: FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---prev: 
+---follow: 44, 
+Label else_5_end
+
+----------Block 44-----------
+---begin: else_4_end
+---next:  @testReturnChar
+---DEF: 
+---USE: 
+---IN:  FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---OUT: FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---prev: 
+---follow: 50, 51, 52, 53, 67, 69, 
+Label else_4_end
+func testReturnChar -> Retreturn  retValue:'_'
+
+----------Block 45-----------
+---begin: testReturn
+---next:  fac
+---DEF: 
+---USE: 
+---IN:  FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---OUT: FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---prev: 
+---follow: 12, 
+func testReturn()
+protect env
+push 3
+call fac
+
+----------Block 46-----------
+---begin: 
+---next:  fac
+---DEF: FunRet_~46, 
+---USE: 
+---IN:  FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---OUT: FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---prev: 
+---follow: 12, 
+FunRet_~46 = retValue
+protect env
+push 2
+call fac
+
+----------Block 47-----------
+---begin: 
+---next:  Fibonacci
+---DEF: FunRet_~47, 
+---USE: FunRet_~46, 
+---IN:  FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---OUT: FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---prev: 
+---follow: 5, 
+FunRet_~47 = retValue
++		FunRet_~46		FunRet_~47		~48
+protect env
+push ~48
+call Fibonacci
+
+----------Block 48-----------
+---begin: 
+---next:  testReturnInt
+---DEF: FunRet_~49, 
+---USE: 
+---IN:  FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---OUT: FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---prev: 
+---follow: 33, 
+FunRet_~49 = retValue
+protect env
+push FunRet_~49
+call testReturnInt
+
+----------Block 49-----------
+---begin: 
+---next:  testReturnChar
+---DEF: FunRet_~50, 
+---USE: 
+---IN:  FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---OUT: FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---prev: 
+---follow: 34, 
+FunRet_~50 = retValue
+printf FunRet_~50
+printf newline
+protect env
+push 1
+call testReturnChar
+
+----------Block 50-----------
+---begin: 
+---next:  testReturnChar
+---DEF: FunRet_~51, 
+---USE: 
+---IN:  FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---OUT: FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---prev: 
+---follow: 34, 
+FunRet_~51 = retValue
+printf FunRet_~51
+printf newline
+protect env
+push 2
+call testReturnChar
+
+----------Block 51-----------
+---begin: 
+---next:  testReturnChar
+---DEF: FunRet_~52, 
+---USE: 
+---IN:  FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---OUT: FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---prev: 
+---follow: 34, 
+FunRet_~52 = retValue
+printf FunRet_~52
+printf newline
+protect env
+push 3
+call testReturnChar
+
+----------Block 52-----------
+---begin: 
+---next:  testReturnChar
+---DEF: FunRet_~53, 
+---USE: 
+---IN:  FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---OUT: FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---prev: 
+---follow: 34, 
+FunRet_~53 = retValue
+printf FunRet_~53
+printf newline
+protect env
+push 4
+call testReturnChar
+
+----------Block 53-----------
+---begin: 
+---next:  @testReturn
+---DEF: FunRet_~54, 
+---USE: 
+---IN:  FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---OUT: FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---prev: 
+---follow: 114, 
+FunRet_~54 = retValue
+printf FunRet_~54
+printf newline
+func testReturn -> NonRetreturn
+
+----------Block 54-----------
+---begin: 
+---next:  @testReturn
+---DEF: 
+---USE: 
+---IN:  FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---OUT: FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---prev: 
+---follow: 114, 
+func testReturn -> NonRetreturn
+
+----------Block 55-----------
+---begin: testAssignAndExp
+---next:  Fibonacci
+---DEF: 
+---USE: 
+---IN:  FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---OUT: FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---prev: 
+---follow: 5, 
+func testAssignAndExp()
+protect env
+push 5
+call Fibonacci
+
+----------Block 56-----------
+---begin: 
+---next:  Fibonacci
+---DEF: FunRet_~55, 
+---USE: 
+---IN:  FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---OUT: FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---prev: 
+---follow: 5, 
+FunRet_~55 = retValue
+protect env
+push FunRet_~55
+call Fibonacci
+
+----------Block 57-----------
+---begin: 
+---next:  Fibonacci
+---DEF: FunRet_~56, 
+---USE: 
+---IN:  FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---OUT: FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---prev: 
+---follow: 5, 
+FunRet_~56 = retValue
+protect env
+push FunRet_~56
+call Fibonacci
+
+----------Block 58-----------
+---begin: 
+---next:  fac
+---DEF: FunRet_~57, 
+---USE: 
+---IN:  FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---OUT: FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---prev: 
+---follow: 12, 
+FunRet_~57 = retValue
++		FunRet_~57		0		~58
+protect env
+push 3
+call fac
+
+----------Block 59-----------
+---begin: 
+---next:  fac
+---DEF: FunRet_~59, int_temp_1, 
+---USE: 
+---IN:  FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_2, int_temp_3, 
+---OUT: FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---prev: 
+---follow: 12, 
+FunRet_~59 = retValue
+/		~58		FunRet_~59		~58
++		~58		1		int_temp_1
+protect env
+push 3
+call fac
+
+----------Block 60-----------
+---begin: 
+---next:  fac
+---DEF: FunRet_~60, 
+---USE: 
+---IN:  FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---OUT: FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---prev: 
+---follow: 12, 
+FunRet_~60 = retValue
+protect env
+push 2
+call fac
+
+----------Block 61-----------
+---begin: 
+---next:  fac
+---DEF: FunRet_~61, 
+---USE: FunRet_~60, 
+---IN:  FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---OUT: FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---prev: 
+---follow: 12, 
+FunRet_~61 = retValue
++		FunRet_~60		FunRet_~61		~62
+protect env
+push ~62
+call fac
+
+----------Block 62-----------
+---begin: 
+---next:  testReturnInt
+---DEF: FunRet_~63, int_temp_2, 
+---USE: 
+---IN:  FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_3, 
+---OUT: FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---prev: 
+---follow: 33, 
+FunRet_~63 = retValue
+=		FunRet_~63		int_temp_2
+protect env
+push 0
+call testReturnInt
+
+----------Block 63-----------
+---begin: 
+---next:  testReturnInt
+---DEF: FunRet_~64, 
+---USE: 
+---IN:  FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---OUT: FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---prev: 
+---follow: 33, 
+FunRet_~64 = retValue
+[]=		FunRet_~64		0		int_array
+protect env
+push 0
+call testReturnInt
+
+----------Block 64-----------
+---begin: 
+---next:  testReturnInt
+---DEF: FunRet_~65, 
+---USE: 
+---IN:  FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---OUT: FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---prev: 
+---follow: 33, 
+FunRet_~65 = retValue
+*		FunRet_~65		-12345679		~66
++		~66		12345679		~66
+-		1		~66		~66
+protect env
+push 1
+call testReturnInt
+
+----------Block 65-----------
+---begin: 
+---next:  testReturnInt
+---DEF: FunRet_~67, 
+---USE: 
+---IN:  FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---OUT: FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---prev: 
+---follow: 33, 
+FunRet_~67 = retValue
++		FunRet_~67		1		~68
+[]=		~68		~66		int_array
+=[]		int_array		0		~69
+protect env
+push 0
+call testReturnInt
+
+----------Block 66-----------
+---begin: 
+---next:  testReturnChar
+---DEF: FunRet_~70, int_temp_3, 
+---USE: 
+---IN:  FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, 
+---OUT: FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---prev: 
+---follow: 34, 
+FunRet_~70 = retValue
+*		FunRet_~70		-12345679		~71
++		~71		12345679		~71
+-		1		~71		~71
+=[]		int_array		~71		~71
+*		~71		1		~71
+-		~69		~71		int_temp_3
+=[]		int_array		0		~72
+protect env
+push ~72
+call testReturnChar
+
+----------Block 67-----------
+---begin: 
+---next:  testReturnInt
+---DEF: FunRet_~73, 
+---USE: 
+---IN:  FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---OUT: FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---prev: 
+---follow: 33, 
+FunRet_~73 = retValue
+[]=		FunRet_~73		0		char_array
+protect env
+push 0
+call testReturnInt
+
+----------Block 68-----------
+---begin: 
+---next:  testReturnChar
+---DEF: FunRet_~74, 
+---USE: 
+---IN:  FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---OUT: FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---prev: 
+---follow: 34, 
+FunRet_~74 = retValue
+*		FunRet_~74		-12345679		~75
++		~75		12345679		~75
+-		1		~75		~75
+=[]		int_array		1		~76
++		~76		1		~76
+protect env
+push ~76
+call testReturnChar
+
+----------Block 69-----------
+---begin: 
+---next:  testReturnInt
+---DEF: FunRet_~77, char_temp_1, 
+---USE: 
+---IN:  FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---OUT: FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---prev: 
+---follow: 33, 
+FunRet_~77 = retValue
+[]=		FunRet_~77		~75		char_array
+=[]		char_array		0		~78
+=		~78		char_temp_1
+protect env
+push 0
+call testReturnInt
+
+----------Block 70-----------
+---begin: 
+---next:  testReturnInt
+---DEF: FunRet_~79, char_temp_2, 
+---USE: int_temp_1, int_temp_2, int_temp_3, 
+---IN:  FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, int_temp_1, int_temp_2, int_temp_3, 
+---OUT: FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---prev: 
+---follow: 33, 
+FunRet_~79 = retValue
+*		FunRet_~79		-12345679		~80
++		~80		12345679		~80
+-		1		~80		~80
+=[]		char_array		~80		~80
+=		~80		char_temp_2
+printf int_temp_1
+printf newline
+printf int_temp_2
+printf newline
+printf int_temp_3
+printf newline
+=[]		int_array		0		~81
+printf ~81
+printf newline
+protect env
+push 0
+call testReturnInt
+
+----------Block 71-----------
+---begin: 
+---next:  @testAssignAndExp
+---DEF: FunRet_~82, 
+---USE: char_temp_1, char_temp_2, 
+---IN:  char_temp_1, char_temp_2, 
+---OUT: 
+---prev: 
+---follow: 116, 
+FunRet_~82 = retValue
+*		FunRet_~82		-12345679		~83
++		~83		12345679		~83
+-		1		~83		~83
+=[]		int_array		~83		~83
+printf ~83
+printf newline
+printf char_temp_1
+printf newline
+printf char_temp_2
+printf newline
+=[]		char_array		0		~84
+printf ~84
+printf newline
+=[]		char_array		1		~85
+printf ~85
+printf newline
+=[]		char_array		0		~86
+=[]		char_array		0		~87
+*		~87		char_temp_2		~87
++		~86		~87		~87
+*		char_temp_1		~87		~87
+printf ~87
+printf newline
+func testAssignAndExp -> NonRetreturn
+
+----------Block 72-----------
+---begin: 
+---next:  @testAssignAndExp
+---DEF: 
+---USE: 
+---IN:  
+---OUT: 
+---prev: 
+---follow: 116, 
+func testAssignAndExp -> NonRetreturn
+
+----------Block 73-----------
+---begin: testIO
+---next:  @testIO
+---DEF: 
+---USE: 
+---IN:  FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---OUT: FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---prev: 
+---follow: 115, 
+func testIO()
+scanf global_int_1
+scanf global_char_1
+printf string3
+printf newline
+printf global_int_1
+printf newline
+printf global_char_1
+printf newline
+scanf global_int_1
+scanf global_char_1
+printf string4
+printf global_int_1
+printf newline
+printf global_char_1
+printf newline
+scanf global_char_1
+scanf global_int_1
+printf string5
+printf global_char_1
+printf newline
+printf global_int_1
+printf newline
+func testIO -> NonRetreturn
+
+----------Block 74-----------
+---begin: 
+---next:  @testIO
+---DEF: 
+---USE: 
+---IN:  FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---OUT: FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---prev: 
+---follow: 115, 
+func testIO -> NonRetreturn
+
+----------Block 75-----------
+---begin: testIfWhile
+---next:  if_7_end
+---DEF: a, b, c, d, k, 
+---USE: 
+---IN:  
+---OUT: a, b, c, d, k, 
+---prev: 
+---follow: 76, 93, 
+func testIfWhile()
+=		10		k
+=		'+'		a
+=		'-'		b
+=		'*'		c
+=		'/'		d
+ble		k		0		if_7_end
+
+----------Block 76-----------
+---begin: 
+---next:  if_8_end
+---DEF: 
+---USE: k, 
+---IN:  a, b, c, d, k, 
+---OUT: a, b, c, d, k, 
+---prev: 
+---follow: 77, 92, 
+bgt		k		10		if_8_end
+
+----------Block 77-----------
+---begin: 
+---next:  
+---DEF: i, 
+---USE: 
+---IN:  a, b, c, d, k, 
+---OUT: a, b, c, d, i, k, 
+---prev: 
+---follow: 78, 
+=		0		i
+
+----------Block 78-----------
+---begin: while_0_begin
+---next:  while_0_end
+---DEF: 
+---USE: i, k, 
+---IN:  a, b, c, d, i, k, 
+---OUT: a, b, c, d, i, k, 
+---prev: 
+---follow: 79, 85, 
+Label while_0_begin
+/		k		2		~88
+bge		i		~88		while_0_end
+
+----------Block 79-----------
+---begin: 
+---next:  if_9_end
+---DEF: 
+---USE: i, 
+---IN:  a, b, c, d, i, k, 
+---OUT: a, b, c, d, i, k, 
+---prev: 
+---follow: 80, 81, 
+%		i		2		~89
+bne		~89		0		if_9_end
+
+----------Block 80-----------
+---begin: 
+---next:  else_9_end
+---DEF: 
+---USE: a, i, 
+---IN:  a, b, c, d, i, k, 
+---OUT: a, b, c, d, i, k, 
+---prev: 
+---follow: 84, 
+[]=		a		i		global_char_array_3
+j else_9_end
+
+----------Block 81-----------
+---begin: if_9_end
+---next:  if_10_end
+---DEF: 
+---USE: i, 
+---IN:  a, b, c, d, i, k, 
+---OUT: a, b, c, d, i, k, 
+---prev: 
+---follow: 82, 83, 
+Label if_9_end
+%		i		2		~90
+bne		~90		1		if_10_end
+
+----------Block 82-----------
+---begin: 
+---next:  
+---DEF: 
+---USE: b, i, 
+---IN:  a, b, c, d, i, k, 
+---OUT: a, b, c, d, i, k, 
+---prev: 
+---follow: 83, 
+[]=		b		i		global_char_array_3
+
+----------Block 83-----------
+---begin: if_10_end
+---next:  
+---DEF: 
+---USE: 
+---IN:  a, b, c, d, i, k, 
+---OUT: a, b, c, d, i, k, 
+---prev: 
+---follow: 84, 
+Label if_10_end
+
+----------Block 84-----------
+---begin: else_9_end
+---next:  while_0_begin
+---DEF: 
+---USE: i, 
+---IN:  a, b, c, d, i, k, 
+---OUT: a, b, c, d, i, k, 
+---prev: 
+---follow: 78, 
+Label else_9_end
+=[]		global_char_array_3		i		~91
+printf ~91
+printf newline
++		i		1		i
+j while_0_begin
+
+----------Block 85-----------
+---begin: while_0_end
+---next:  
+---DEF: 
+---USE: 
+---IN:  c, d, i, k, 
+---OUT: c, d, i, k, 
+---prev: 
+---follow: 86, 
+Label while_0_end
+
+----------Block 86-----------
+---begin: while_1_begin
+---next:  while_1_end
+---DEF: 
+---USE: i, k, 
+---IN:  c, d, i, k, 
+---OUT: c, d, i, k, 
+---prev: 
+---follow: 87, 91, 
+Label while_1_begin
+bge		i		k		while_1_end
+
+----------Block 87-----------
+---begin: 
+---next:  if_11_end
+---DEF: 
+---USE: i, 
+---IN:  c, d, i, k, 
+---OUT: c, d, i, k, 
+---prev: 
+---follow: 88, 89, 
+%		i		2		~93
+bne		~93		0		if_11_end
+
+----------Block 88-----------
+---begin: 
+---next:  else_11_end
+---DEF: 
+---USE: c, i, 
+---IN:  c, d, i, k, 
+---OUT: c, d, i, k, 
+---prev: 
+---follow: 90, 
+[]=		c		i		global_char_array_3
+j else_11_end
+
+----------Block 89-----------
+---begin: if_11_end
+---next:  
+---DEF: 
+---USE: d, i, 
+---IN:  c, d, i, k, 
+---OUT: c, d, i, k, 
+---prev: 
+---follow: 90, 
+Label if_11_end
+[]=		d		i		global_char_array_3
+
+----------Block 90-----------
+---begin: else_11_end
+---next:  while_1_begin
+---DEF: 
+---USE: i, 
+---IN:  c, d, i, k, 
+---OUT: c, d, i, k, 
+---prev: 
+---follow: 86, 
+Label else_11_end
+=[]		global_char_array_3		i		~94
+printf ~94
+printf newline
++		i		1		i
+j while_1_begin
+
+----------Block 91-----------
+---begin: while_1_end
+---next:  
+---DEF: 
+---USE: 
+---IN:  
+---OUT: 
+---prev: 
+---follow: 92, 
+Label while_1_end
+
+----------Block 92-----------
+---begin: if_8_end
+---next:  
+---DEF: 
+---USE: 
+---IN:  
+---OUT: 
+---prev: 
+---follow: 93, 
+Label if_8_end
+
+----------Block 93-----------
+---begin: if_7_end
+---next:  @testIfWhile
+---DEF: 
+---USE: 
+---IN:  
+---OUT: 
+---prev: 
+---follow: 117, 
+Label if_7_end
+func testIfWhile -> NonRetreturn
+
+----------Block 94-----------
+---begin: 
+---next:  @testIfWhile
+---DEF: 
+---USE: 
+---IN:  
+---OUT: 
+---prev: 
+---follow: 117, 
+func testIfWhile -> NonRetreturn
+
+----------Block 95-----------
+---begin: func_ret_int_1
+---next:  @func_ret_int_1
+---DEF: c_2, c_temp, i_temp, 
+---USE: 
+---IN:  
+---OUT: 
+---prev: 
+---follow: 97, 
+func func_ret_int_1()
+para in func: i_1
+para in func: i_2
+para in func: c_1
+para in func: c_2
+printf string6
+printf newline
+printf i_1
+printf newline
+printf i_2
+printf newline
+printf c_1
+printf newline
+printf c_2
+printf newline
+=		i_1		i_temp
+=		i_2		i_1
+=		i_temp		i_2
+=		c_1		c_temp
+=		c_2		c_1
+=		c_temp		c_2
+printf string7
+printf newline
+printf i_1
+printf newline
+printf i_2
+printf newline
+printf c_1
+printf newline
+printf c_2
+printf newline
+func func_ret_int_1 -> Retreturn  retValue:i_1
+
+----------Block 96-----------
+---begin: testPara
+---next:  func_ret_int_1
+---DEF: c, d, i, j, 
+---USE: 
+---IN:  
+---OUT: 
+---prev: 
+---follow: 95, 
+func testPara()
+=		12345679		i
+=		-12345679		j
+=		'A'		c
+=		'Z'		d
+protect env
+push i
+push j
+push c
+push d
+call func_ret_int_1
+
+----------Block 97-----------
+---begin: 
+---next:  @testPara
+---DEF: FunRet_~96, 
+---USE: 
+---IN:  
+---OUT: 
+---prev: 
+---follow: 118, 
+FunRet_~96 = retValue
+printf FunRet_~96
+printf newline
+func testPara -> NonRetreturn
+
+----------Block 98-----------
+---begin: 
+---next:  @testPara
+---DEF: 
+---USE: 
+---IN:  
+---OUT: 
+---prev: 
+---follow: 118, 
+func testPara -> NonRetreturn
+
+----------Block 99-----------
+---begin: testRecursion
+---next:  fac
+---DEF: 
+---USE: 
+---IN:  FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---OUT: FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---prev: 
+---follow: 12, 
+func testRecursion()
+protect env
+push 2
+call fac
+
+----------Block 100-----------
+---begin: 
+---next:  fac
+---DEF: FunRet_~97, 
+---USE: 
+---IN:  FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---OUT: FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---prev: 
+---follow: 12, 
+FunRet_~97 = retValue
+protect env
+push 3
+call fac
+
+----------Block 101-----------
+---begin: 
+---next:  Fibonacci
+---DEF: FunRet_~98, 
+---USE: FunRet_~97, 
+---IN:  FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---OUT: FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---prev: 
+---follow: 5, 
+FunRet_~98 = retValue
+*		FunRet_~97		FunRet_~98		~99
+protect env
+push ~99
+call Fibonacci
+
+----------Block 102-----------
+---begin: 
+---next:  Fibonacci
+---DEF: FunRet_~100, 
+---USE: 
+---IN:  FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---OUT: FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---prev: 
+---follow: 5, 
+FunRet_~100 = retValue
+protect env
+push 3
+call Fibonacci
+
+----------Block 103-----------
+---begin: 
+---next:  Fibonacci
+---DEF: FunRet_~101, 
+---USE: 
+---IN:  FunRet_~100, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---OUT: FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---prev: 
+---follow: 5, 
+FunRet_~101 = retValue
+protect env
+push 4
+call Fibonacci
+
+----------Block 104-----------
+---begin: 
+---next:  fac
+---DEF: FunRet_~102, 
+---USE: FunRet_~101, 
+---IN:  FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---OUT: FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---prev: 
+---follow: 12, 
+FunRet_~102 = retValue
++		FunRet_~101		FunRet_~102		~103
+protect env
+push ~103
+call fac
+
+----------Block 105-----------
+---begin: 
+---next:  Fibonacci
+---DEF: FunRet_~104, 
+---USE: FunRet_~100, 
+---IN:  FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---OUT: FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---prev: 
+---follow: 5, 
+FunRet_~104 = retValue
+-		FunRet_~100		FunRet_~104		~105
+protect env
+push 2
+call Fibonacci
+
+----------Block 106-----------
+---begin: 
+---next:  Fibonacci
+---DEF: FunRet_~106, 
+---USE: 
+---IN:  FunRet_~100, FunRet_~101, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---OUT: FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---prev: 
+---follow: 5, 
+FunRet_~106 = retValue
+protect env
+push 3
+call Fibonacci
+
+----------Block 107-----------
+---begin: 
+---next:  fac
+---DEF: FunRet_~107, 
+---USE: FunRet_~106, 
+---IN:  FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---OUT: FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---prev: 
+---follow: 12, 
+FunRet_~107 = retValue
++		FunRet_~106		FunRet_~107		~108
+protect env
+push ~108
+call fac
+
+----------Block 108-----------
+---begin: 
+---next:  hanoi
+---DEF: FunRet_~109, 
+---USE: 
+---IN:  FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---OUT: FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---prev: 
+---follow: 0, 
+FunRet_~109 = retValue
+/		~105		FunRet_~109		~105
+protect env
+push ~105
+push 'a'
+push 'b'
+push 'c'
+call hanoi
+
+----------Block 109-----------
+---begin: 
+---next:  @testRecursion
+---DEF: 
+---USE: 
+---IN:  FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---OUT: FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---prev: 
+---follow: 112, 
+func testRecursion -> NonRetreturn
+
+----------Block 110-----------
+---begin: 
+---next:  @testRecursion
+---DEF: 
+---USE: 
+---IN:  FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---OUT: FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---prev: 
+---follow: 112, 
+func testRecursion -> NonRetreturn
+
+----------Block 111-----------
+---begin: main
+---next:  testRecursion
+---DEF: 
+---USE: 
+---IN:  FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---OUT: FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---prev: 
+---follow: 99, 
+func main()
+printf string8
+printf newline
+printf string9
+printf newline
+call testRecursion
+
+----------Block 112-----------
+---begin: 
+---next:  testGlobal
+---DEF: 
+---USE: 
+---IN:  FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---OUT: FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---prev: 
+---follow: 26, 
+printf string10
+printf newline
+printf string11
+printf newline
+call testGlobal
+
+----------Block 113-----------
+---begin: 
+---next:  testReturn
+---DEF: 
+---USE: 
+---IN:  FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---OUT: FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---prev: 
+---follow: 45, 
+printf string12
+printf newline
+printf string13
+printf newline
+call testReturn
+
+----------Block 114-----------
+---begin: 
+---next:  testIO
+---DEF: 
+---USE: 
+---IN:  FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---OUT: FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---prev: 
+---follow: 73, 
+printf string14
+printf newline
+printf string15
+printf newline
+call testIO
+
+----------Block 115-----------
+---begin: 
+---next:  testAssignAndExp
+---DEF: 
+---USE: 
+---IN:  FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---OUT: FunRet_~100, FunRet_~101, FunRet_~106, FunRet_~3, FunRet_~46, FunRet_~60, FunRet_~97, char_temp_1, char_temp_2, int_temp_1, int_temp_2, int_temp_3, 
+---prev: 
+---follow: 55, 
+printf string16
+printf newline
+printf string17
+printf newline
+call testAssignAndExp
+
+----------Block 116-----------
+---begin: 
+---next:  testIfWhile
+---DEF: 
+---USE: 
+---IN:  
+---OUT: 
+---prev: 
+---follow: 75, 
+printf string18
+printf newline
+printf string19
+printf newline
+call testIfWhile
+
+----------Block 117-----------
+---begin: 
+---next:  testPara
+---DEF: 
+---USE: 
+---IN:  
+---OUT: 
+---prev: 
+---follow: 96, 
+printf string20
+printf newline
+printf string21
+printf newline
+call testPara
+
+----------Block 118-----------
+---begin: 
+---next:  @main
+---DEF: 
+---USE: 
+---IN:  
+---OUT: 
+---prev: 
+---follow: 
+printf string22
+printf newline
+func main -> NonRetreturn
+
+----------Block 119-----------
+---begin: 
+---next:  @main
+---DEF: 
+---USE: 
+---IN:  
+---OUT: 
+---prev: 
+---follow: 
+func main -> NonRetreturn
+
+----------Block 120-----------
+---begin: end
+---next:  
+---DEF: 
+---USE: 
+---IN:  
+---OUT: 
+---prev: 
+---follow: 
+Label end
+

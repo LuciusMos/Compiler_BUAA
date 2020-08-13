@@ -1,0 +1,61 @@
+const int int_a = 0;
+const int int_b = -0, int_c = 3, int_d = +3;
+const int int_e = 123, int_f = -123;
+const char char_a = 'a', char_b = 'b';
+const char char_c = 'c';
+
+int int_z;
+int int_y[4], int_x;
+char char_d[5];
+char char_z, char_y;
+
+char fun1(char p1_c)
+{
+    return(p1_c);
+}
+char fun2()
+{
+    return('f');
+}
+int mult_div_relation(int a, int b)
+{
+    int mult, div;
+    mult = a * b;
+    div = a / b;
+    if (mult >= div) return(mult - div);
+    if (mult <= div) return(div - mult);
+    return(mult - div);
+}
+void string1()
+{
+    printf("qwertyuiopasdfghjklzxcvbnm");
+    printf("QWERTYUIOPASDFGHJKLZXCVBNM");
+    printf("1234567890");
+}
+int string2()
+{
+    printf("-=][;',./<>?:_}{+");
+    return(1);
+}
+void expression()
+{
+    int a, b, c[5];
+    a = +fun2() * b - c[3] + (3 + '/') * int_a;
+}
+void compound_statement1()
+{
+    const int a = 1;
+    printf(a);
+}
+
+void main()
+{
+    char a;
+    int b;
+    scanf(a);
+    a = fun1('a');
+    b = mult_div_relation(2, 3);
+    if (1 > 0) fun1('a');
+    if (1 < 0) ;
+    do ; while(1)
+}

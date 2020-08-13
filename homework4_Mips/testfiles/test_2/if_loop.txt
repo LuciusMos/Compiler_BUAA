@@ -1,0 +1,35 @@
+const int ca = 1;
+int ga, gb;
+int gc[2];
+void main() {
+	ga = 8;
+	gb = 2;
+	gc[0] = 5;
+	gc[1] = 0;
+	
+	
+	if (ga > gb) printf(ga);
+	else printf("??");
+	if (ga+gc[1]-ca) ga = 3;
+	printf(ga);
+	
+	for (ga = 1; ga <= gc[0]+gb; ga = ga + 2) {
+		gb = gb - 1;
+	}
+	printf(ga);
+	printf(gb);
+	
+	while(ga) {
+		ga = ga - 1;
+		gb = gb + 1;
+	}
+	printf(ga);
+	printf(gb);
+	
+	do {
+		gb = gb + 3;
+		gc[0] = gc[0] - 1;
+	} while(ga > 2+gb+gc[0])
+	printf(ga);
+	printf(gb);
+}

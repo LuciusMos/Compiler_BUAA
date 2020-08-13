@@ -1,0 +1,42 @@
+int stack[100], top;
+
+int isfull()
+{
+	if (top == 99) return(1);
+	else return(0);
+}
+int isempty()
+{
+	if (top == -1) return(1);
+	else return(0);
+}
+void push(int y)
+{
+	if (isfull()) printf("stack is FULL");
+	else {
+		top = top + 1;
+		stack[top] = y;
+	}
+	return;
+}
+void pop()
+{
+	if (isempty()) printf("stack is EMPTY");
+	else printf(stack[top]);
+	top = top - 1;
+	return;
+}
+
+void main()
+{
+	int x, y;
+	top = -1;
+	while (1) {
+		scanf(x);
+		if (x == 1) {
+			scanf(y);
+			push(y);
+		}
+		if (x == 0) pop();
+	}
+}

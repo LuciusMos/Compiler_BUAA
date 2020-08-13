@@ -1,0 +1,48 @@
+const char _ijK_ = '!';
+int _ijK_;
+int ijk;
+int my_FUN_1(int _abC123) {
+	int _ijK_;
+	char a, min;
+	printf("few~");
+	_ijK_ = a;
+	return (a);
+}
+int my_FUN_2() {
+	char a2, min;
+	return (a2 - min);
+}
+int my_FUN_3() {
+	int array[5];
+	char c;
+	array[c] = 1;
+	ijk = '2';
+}
+void void_1( {
+	return('a');
+}
+char next_Fun_2(char K, int ui_aS_12) {
+	const int quite_Speed = 0, d0ffre_u = 12
+	int i;
+	for (quite_Speed = quite_Speed; i < 2; i = i + 3
+		i = 1;
+	do {
+		
+	} (K == aa)
+	return (_ijK_);
+}
+void fun_em(int a, int b) {
+	int em_arr[3;
+	a = a + b;
+}
+void main() {
+	const int we = 'c';
+	const char you = 3;
+	const int he = 5
+	void_1();
+	my_FUN_1();
+	my_FUN_2();
+	void_1();
+	fun_em(we, you);
+	return;
+}

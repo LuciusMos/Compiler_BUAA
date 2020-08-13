@@ -1,0 +1,162 @@
+CONSTTK const
+CHARTK char
+IDENFR ABC
+ASSIGN =
+CHARCON a
+COMMA ,
+IDENFR DEF
+ASSIGN =
+CHARCON b
+<常量定义>
+SEMICN ;
+<常量说明>
+VOIDTK void
+MAINTK main
+LPARENT (
+RPARENT )
+LBRACE {
+INTTK int
+IDENFR q
+COMMA ,
+IDENFR w
+COMMA ,
+IDENFR e
+COMMA ,
+IDENFR r
+COMMA ,
+IDENFR t
+<变量定义>
+SEMICN ;
+CHARTK char
+IDENFR a
+LBRACK [
+INTCON 100
+<无符号整�?
+RBRACK ]
+<变量定义>
+SEMICN ;
+<变量说明>
+SCANFTK scanf
+LPARENT (
+IDENFR t
+RPARENT )
+<读语�?
+SEMICN ;
+<语句>
+FORTK for
+LPARENT (
+IDENFR q
+ASSIGN =
+MINU -
+LPARENT (
+IDENFR ABC
+<因子>
+<�?
+MINU -
+IDENFR DEF
+<因子>
+<�?
+<表达�?
+RPARENT )
+<因子>
+<�?
+<表达�?
+SEMICN ;
+IDENFR q
+<因子>
+<�?
+<表达�?
+LSS <
+INTCON 100
+<无符号整�?
+<整数>
+<因子>
+<�?
+<表达�?
+<条件>
+SEMICN ;
+IDENFR q
+ASSIGN =
+IDENFR q
+PLUS +
+INTCON 1
+<无符号整�?
+<步长>
+RPARENT )
+LBRACE {
+IFTK if
+LPARENT (
+PLUS +
+IDENFR q
+<因子>
+DIV /
+INTCON 2
+<无符号整�?
+<整数>
+<因子>
+<�?
+<表达�?
+LEQ <=
+INTCON 25
+<无符号整�?
+<整数>
+<因子>
+<�?
+<表达�?
+<条件>
+RPARENT )
+LBRACE {
+IDENFR a
+LBRACK [
+IDENFR q
+<因子>
+<�?
+<表达�?
+RBRACK ]
+ASSIGN =
+IDENFR ABC
+<因子>
+<�?
+<表达�?
+<赋值语�?
+SEMICN ;
+<语句>
+<语句�?
+RBRACE }
+<语句>
+ELSETK else
+LBRACE {
+IDENFR a
+LBRACK [
+IDENFR q
+<因子>
+<�?
+<表达�?
+RBRACK ]
+ASSIGN =
+IDENFR DEF
+<因子>
+<�?
+<表达�?
+<赋值语�?
+SEMICN ;
+<语句>
+<语句�?
+RBRACE }
+<语句>
+<条件语句>
+<语句>
+<语句�?
+RBRACE }
+<语句>
+<循环语句>
+<语句>
+RETURNTK return
+<返回语句>
+SEMICN ;
+<语句>
+<语句�?
+<复合语句>
+RBRACE }
+<主函�?
+<程序>

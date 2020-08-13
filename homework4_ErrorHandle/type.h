@@ -1,0 +1,21 @@
+#pragma once
+
+enum symbolType {
+	IDENFR, INTCON, CHARCON, STRCON,
+	CONSTTK, INTTK, CHARTK, VOIDTK, MAINTK,
+	IFTK, ELSETK, DOTK, WHILETK, FORTK,
+	SCANFTK, PRINTFTK, RETURNTK,
+	PLUS, MINU, MULT, DIV,
+	LSS, LEQ, GRE, GEQ, EQL, NEQ, ASSIGN,
+	SEMICN, COMMA,
+	LPARENT, RPARENT, //()
+	LBRACK, RBRACK,   //[]
+	LBRACE, RBRACE    //{}
+};
+
+enum EntryKind { //SymbolTable
+	CONST, VAR, FUNC
+};
+enum EntryType { //SymbolTable
+	VOID, CHAR, INT, STRING
+};

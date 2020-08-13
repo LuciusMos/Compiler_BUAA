@@ -1,0 +1,25 @@
+const int ia = 1;
+const char ca = 'a';
+int ga, gb;
+int gc[2];
+char gd;
+int fun1(int fun1_ia, char fun1_ca)
+{
+	const char fun1_cb;
+	int fun1_ib, fun1_ic;
+	char fun1_cc;
+}
+void main() {
+	char char_c;
+	char_c = ca + 1;
+	printf(char_c);
+	gd = 'b';
+	printf(gd);
+	printf(ca);
+	ga = 8;
+	gb = 2;
+	gc[0] = 5;
+	gc[1] = 0;
+	printf(ga+gb+gc[0]+gc[1]);
+	
+}

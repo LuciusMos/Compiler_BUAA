@@ -1,0 +1,122 @@
+INTTK int
+IDENFR l
+<变量定义>
+SEMICN ;
+<变量说明>
+VOIDTK void
+MAINTK main
+LPARENT (
+RPARENT )
+LBRACE {
+CONSTTK const
+CHARTK char
+IDENFR zero_0
+ASSIGN =
+CHARCON 0
+<常量定义>
+SEMICN ;
+<常量说明>
+CHARTK char
+IDENFR u
+COMMA ,
+IDENFR i
+<变量定义>
+SEMICN ;
+INTTK int
+IDENFR m
+COMMA ,
+IDENFR M123we
+COMMA ,
+IDENFR ZERO
+COMMA ,
+IDENFR ONE
+<变量定义>
+SEMICN ;
+<变量说明>
+IDENFR M123we
+ASSIGN =
+INTCON 30
+<无符号整�?
+<整数>
+<因子>
+<�?
+<表达�?
+<赋值语�?
+SEMICN ;
+<语句>
+IDENFR ZERO
+ASSIGN =
+INTCON 0
+<无符号整�?
+<整数>
+<因子>
+<�?
+<表达�?
+<赋值语�?
+SEMICN ;
+<语句>
+IDENFR ONE
+ASSIGN =
+INTCON 1
+<无符号整�?
+<整数>
+<因子>
+<�?
+<表达�?
+<赋值语�?
+SEMICN ;
+<语句>
+SCANFTK scanf
+LPARENT (
+IDENFR u
+COMMA ,
+IDENFR i
+COMMA ,
+IDENFR m
+RPARENT )
+<读语�?
+SEMICN ;
+<语句>
+PRINTFTK printf
+LPARENT (
+STRCON @####whether u is greater than m ? %d\n####@
+<字符�?
+COMMA ,
+IDENFR M123we
+<因子>
+<�?
+MINU -
+IDENFR m
+<因子>
+<�?
+<表达�?
+RPARENT )
+<写语�?
+SEMICN ;
+<语句>
+PRINTFTK printf
+LPARENT (
+STRCON u-m>=0?ZERO,ONE
+<字符�?
+RPARENT )
+<写语�?
+SEMICN ;
+<语句>
+IDENFR u
+ASSIGN =
+IDENFR zero_0
+<因子>
+<�?
+<表达�?
+<赋值语�?
+SEMICN ;
+<语句>
+RETURNTK return
+<返回语句>
+SEMICN ;
+<语句>
+<语句�?
+<复合语句>
+RBRACE }
+<主函�?
+<程序>

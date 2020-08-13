@@ -1,0 +1,40 @@
+VOIDTK void
+MAINTK main
+LPARENT (
+RPARENT )
+LBRACE {
+PRINTFTK printf
+LPARENT (
+STRCON welcome to cs world!\n
+<字符�?
+RPARENT )
+<写语�?
+SEMICN ;
+<语句>
+PRINTFTK printf
+LPARENT (
+INTCON 20000314
+<无符号整�?
+<整数>
+<因子>
+<�?
+PLUS +
+INTCON 317
+<无符号整�?
+<整数>
+<因子>
+<�?
+<表达�?
+RPARENT )
+<写语�?
+SEMICN ;
+<语句>
+RETURNTK return
+<返回语句>
+SEMICN ;
+<语句>
+<语句�?
+<复合语句>
+RBRACE }
+<主函�?
+<程序>

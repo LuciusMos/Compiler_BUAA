@@ -1,0 +1,162 @@
+const int _aAq_123_u = +129, Edf_qYT_ = -402, ___ = 0;
+const char _ijK_ = '+', _123_k = 'z', MIq_123oi = '8';
+const char Uyt__L_ = '*';
+const char uW123ll = '-';
+const int Z_nice = 56;
+const int abC = -20;
+int _ak9_8_l, uF_123k[120];
+char qwLe;
+int aSd123;
+int my_FUN_1(int _abC123, char uMl_123, int k, char opq12_u) {
+	const int fun_1_I = -1024;
+	const int Fun2II_ = +209;
+	const char MAX_1_ASD = 'a',min = 'A';
+	int isFirst, PRE_char, UI2two;
+	char _2_, _A_, _q_, _2a, _A2, _q2, array_char[101];
+	int I;
+	isFirst = 1 + 2 + k;
+	_2_ = MIq_123oi;
+	_2a = (_2_);
+	
+	for (I = 5; I < 105; I = I + 1) {
+		array_char[I - 5] = MAX_1_ASD ;
+	}
+	array_char[99] = qwLe;
+	PRE_char = 0;
+	if (+(+isFirst)==0)
+		return (0);
+	if (_2a < min) {
+		while (_abC123 > 0)
+			printf("%0lld", _abC123);
+		if (opq12_u >= uMl_123) {
+			return (fun_1_I);
+		}
+		else
+			_q2 = MAX_1_ASD;
+	}
+	else
+		for (I = 7; I != 3; I = I - 1)
+			PRE_char = 2 * I - 4;
+	printf(3+3);
+	return (PRE_char - fun_1_I);
+}
+char next_Fun_2(char K, int ui_aS_12) {
+	const int quite_Speed = 0, d0ffre_u = 12;
+	const char bb = 'b';
+	int data,i;
+	char array_Set0[45],aa;
+	data = _aAq_123_u - 4*d0ffre_u;
+	for (i = quite_Speed; i < ui_aS_12 * 2; i = i + 3)
+		array_Set0[i] =Uyt__L_;
+	aa = _123_k;
+	do {
+		if (data >= ui_aS_12)
+			K = aa;
+		else {
+			printf("not yet reach value\n still sub \t %o data", ui_aS_12- data);
+			data = data -1;
+			K = bb;
+		}
+	} while (K == aa)
+	return (_ijK_);
+}
+char QUITE_123() {
+	const char INFINTY = 'Z';
+	int k ;
+	char i;
+	i = INFINTY;
+	k =	___;
+	scanf(_ak9_8_l, qwLe, aSd123);
+	while (aSd123)
+		printf("%c", INFINTY);
+	return (i);
+}
+int triump2you(int Iml0) {
+	int _myr, QWE_wer, we2two, mpoUML123;
+	int sum;
+	char IJK_123mlo, ujkOPQ123_, same2we_IOP, M123we[6];
+	int x;
+	for (we2two = 10; we2two != 5; we2two = we2two - 1) {
+		M123we[we2two - 6] = uW123ll;
+		printf(" %c \t ",M123we[we2two-6]);
+		printf(" %c ",Uyt__L_);
+	}
+	printf("%c ", M123we[4]);
+	printf("%+9d", (3 + 3));
+	printf(" %c \n", M123we[Iml0/5]);
+	_myr = (3 + 3 + 4);
+	if (Iml0 < 0)
+		return (___);
+	if (+(-_myr) > Z_nice) {
+		printf("this is about greater\n");
+		_ak9_8_l = my_FUN_1(Iml0, 's', _myr, Uyt__L_);
+		mpoUML123 = _ak9_8_l + 1024;
+		QWE_wer = mpoUML123 * abC / Z_nice;
+		sum = QWE_wer + we2two;
+		return ((sum + Iml0) * triump2you(Iml0 - 1));
+	}
+	else {
+		mpoUML123 = 9 - _aAq_123_u;
+		x = -(+_myr) / Edf_qYT_ * (mpoUML123);
+		IJK_123mlo = _123_k;
+		return (3 * Iml0 - triump2you(Iml0*2));
+	}
+}
+
+int No_parameter() {
+	const int MAX_INT = 127, MIN_INT = -128;
+	int q, w, e, r, t, y;
+	y = triump2you(MAX_INT);
+	e = t / y;
+	t = 3 - 9;
+	r = MAX_INT - MIN_INT;
+	e = e +( next_Fun_2('A', 3 + 4) - QUITE_123());
+	w = r * t;
+	q = w - e;
+	q = q + y * 20;
+	return (q - y);
+}
+
+void ASD_2_sort() {
+	const int NEW_DATA = 128, next123 = 32;
+	const char space_0 = '0';
+	int i, j, k, limit_0;
+	char real_space0, temp_char;
+	temp_char = QUITE_123();
+	i = triump2you(next123);
+	j = No_parameter();
+	k = temp_char * i - j;
+	if ((temp_char * i - j) < 0)
+		k = -k;
+	printf("%c is true answer?\n", (space_0 + k) / NEW_DATA);
+}
+
+void ukAS12_My(int uik_123, int Ufaml_we12) {
+	const int ZERO0 = 0, NINE = 9;
+	int q, w, e, r, l;
+	if (uik_123 != Ufaml_we12) {
+		do {
+			q = uik_123 + 5 * Edf_qYT_;
+			l = -(-uik_123) * No_parameter() / (Ufaml_we12 + 1);
+			r = q + l;
+		} while (r + NINE)
+		printf(q);
+		printf(r + NINE);
+		printf(+(-uik_123) * No_parameter() / (Ufaml_we12 + 1));
+	}
+	else {
+		printf(4 + 9);
+		return;
+	}
+}
+
+void main() {
+	const int we = 12,weE = -10;
+	int i,j,k;
+	i = we - weE;
+	j = Z_nice*abC+_aAq_123_u;
+	k = i*j-(i+j);
+	ukAS12_My(j,k);
+	ukAS12_My(we,weE);
+	return;
+}

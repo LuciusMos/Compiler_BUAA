@@ -1,0 +1,14 @@
+const char ABC='a',DEF='b';
+void main(){
+	int q,w,e,r,t;
+	char a[100];
+	scanf(t);
+	for(q=-(ABC-DEF);q<100;q=q+1){
+		if(+q/2 <= 25){
+			a[q] = ABC;
+		}else{
+			a[q] = DEF;
+		}
+	}
+	return ;
+}

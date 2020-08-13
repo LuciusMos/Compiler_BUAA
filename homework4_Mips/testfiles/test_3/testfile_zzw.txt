@@ -1,0 +1,31 @@
+const char aa = 'c', bb = 'c';
+int a, b, c, d;
+
+int add(int num1, int num2){
+	return (num1 + num2 + num1);
+}
+void fun2(int num3)
+{
+	const int funa = 1;
+	int funb[10];
+	funb[2*3] = (funa - funb[3]) * num3;
+}
+void main(){
+	a = 1;
+	b = 2;
+	c = add(a, b) * a;
+	for (a = 1; a < 10; a = a+1) {
+		b = a;
+	}
+	do {
+		a = 1;
+	} while(a != 1)
+	if (a >= 10) {
+		a = 2;
+	}else {
+		a = 1;
+	}
+	scanf(a, b, c, d);
+	printf("c = ", c);
+	
+}

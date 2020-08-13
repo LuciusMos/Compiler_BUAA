@@ -1,0 +1,13 @@
+const char char_A = '+';
+const char char_B = '/', char_C = '3', char_D = 'd';
+const char char123 = '*';
+
+void main()
+{
+	const char a = 'p';
+    const char A = 'q';
+    char b[3], c;
+    char B;
+    b[2] = '-';
+    c = '0';
+}

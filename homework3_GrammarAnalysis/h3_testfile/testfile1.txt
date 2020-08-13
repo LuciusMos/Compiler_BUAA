@@ -1,0 +1,19 @@
+void n12_ext(int xyz2i_,char Qi_12) {
+	const char m = '0';
+	if (Qi_12 - m == xyz2i_) {
+		printf("ascii number is true! show me another to judge~\n");
+		return;
+	}
+	else
+		scanf(Qi_12, xyz2i_);
+}
+
+void main(){
+	const int _myr = 0,QWE_wer=-10,we2two=+128,mpoUML123=5;
+	const char IJK_123mlo = 'a',ujkOPQ123_='_',same2we_IOP='+';
+	n12_ext(_myr,IJK_123mlo);
+	n12_ext(10,IJK_123mlo);
+	n12_ext((3+3),same2we_IOP);
+	n12_ext(we2two-QWE_wer*mpoUML123,ujkOPQ123_);
+	return;
+}

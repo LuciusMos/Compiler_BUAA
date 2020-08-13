@@ -1,0 +1,870 @@
+func hanoi()
+para in func: n
+para in func: from
+para in func: tmp
+para in func: to
+ble		n		0		if_0_end
+-		n		1		~0
+protect env
+push ~0
+push from
+push to
+push tmp
+call hanoi
+printf string0
+printf newline
+printf n
+printf newline
+printf string1
+printf newline
+printf from
+printf newline
+printf string2
+printf newline
+printf to
+printf newline
+-		n		1		~1
+protect env
+push ~1
+push tmp
+push from
+push to
+call hanoi
+Label if_0_end
+func hanoi -> NonRetreturn
+func hanoi -> NonRetreturn
+func Fibonacci()
+para in func: n
+bne		n		0		if_1_end
+func Fibonacci -> Retreturn  retValue:0
+Label if_1_end
+bne		n		1		if_2_end
+func Fibonacci -> Retreturn  retValue:1
+Label if_2_end
+-		n		1		~2
+protect env
+push ~2
+call Fibonacci
+FunRet_~3 = retValue
+-		n		2		~4
+protect env
+push ~4
+call Fibonacci
+FunRet_~5 = retValue
++		FunRet_~3		FunRet_~5		~6
+func Fibonacci -> Retreturn  retValue:~6
+func fac()
+para in func: n
+bne		n		1		if_3_end
+func fac -> Retreturn  retValue:1
+Label if_3_end
+-		n		1		~7
+protect env
+push ~7
+call fac
+FunRet_~8 = retValue
+*		n		FunRet_~8		~9
+func fac -> Retreturn  retValue:~9
+func initGlobalArray()
+[]=		0		0		global_int_array_1
+[]=		1		1		global_int_array_1
+=[]		global_int_array_1		0		~10
+=[]		global_int_array_1		1		~11
++		~10		~11		~11
+[]=		~11		2		global_int_array_1
+=[]		global_int_array_1		2		~12
+=[]		global_int_array_1		1		~13
++		~12		~13		~13
+[]=		~13		3		global_int_array_1
+=[]		global_int_array_1		3		~14
+=[]		global_int_array_1		2		~15
++		~14		~15		~15
+[]=		~15		4		global_int_array_1
+=[]		global_int_array_1		1		~16
+[]=		~16		0		global_int_array_2
+=[]		global_int_array_2		0		~17
+=[]		global_int_array_1		2		~18
+*		~17		~18		~18
+[]=		~18		1		global_int_array_2
+=[]		global_int_array_2		1		~19
+=[]		global_int_array_1		3		~20
+*		~19		~20		~20
+[]=		~20		2		global_int_array_2
+=[]		global_int_array_2		2		~21
+=[]		global_int_array_1		4		~22
+*		~21		~22		~22
+[]=		~22		3		global_int_array_2
+=[]		global_int_array_2		3		~23
+=[]		global_int_array_1		4		~24
+/		~23		~24		~24
+[]=		~24		4		global_int_array_2
+[]=		'a'		0		global_char_array_1
+[]=		'A'		1		global_char_array_1
+[]=		'z'		2		global_char_array_1
+[]=		'Z'		3		global_char_array_1
+[]=		'_'		4		global_char_array_1
+[]=		'+'		0		global_char_array_2
+[]=		'-'		1		global_char_array_2
+[]=		'*'		2		global_char_array_2
+[]=		'/'		3		global_char_array_2
+[]=		'6'		4		global_char_array_2
+func initGlobalArray -> NonRetreturn
+func initGlobalArray -> NonRetreturn
+func assignGlobal()
+para in func: a
+para in func: b
+para in func: c
+para in func: d
+=		a		global_int_1
+=		b		global_char_1
+=		c		global_int_2
+=		d		global_char_2
+func assignGlobal -> NonRetreturn
+func assignGlobal -> NonRetreturn
+func printGlobalConst()
+printf 12345679
+printf newline
+printf 0
+printf newline
+printf 0
+printf newline
+printf -12345679
+printf newline
+printf '9'
+printf newline
+printf '_'
+printf newline
+printf '+'
+printf newline
+printf '*'
+printf newline
+func printGlobalConst -> NonRetreturn
+func printGlobalConst -> NonRetreturn
+func printGlobalVar()
+printf global_int_1
+printf newline
+printf global_int_2
+printf newline
+printf global_char_1
+printf newline
+printf global_char_2
+printf newline
+func printGlobalVar -> NonRetreturn
+func printGlobalVar -> NonRetreturn
+func printGlobalArray()
+=[]		global_int_array_1		0		~25
+printf ~25
+printf newline
+=[]		global_int_array_1		1		~26
+printf ~26
+printf newline
+=[]		global_int_array_1		2		~27
+printf ~27
+printf newline
+=[]		global_int_array_1		3		~28
+printf ~28
+printf newline
+=[]		global_int_array_1		4		~29
+printf ~29
+printf newline
+=[]		global_int_array_2		0		~30
+printf ~30
+printf newline
+=[]		global_int_array_2		1		~31
+printf ~31
+printf newline
+=[]		global_int_array_2		2		~32
+printf ~32
+printf newline
+=[]		global_int_array_2		3		~33
+printf ~33
+printf newline
+=[]		global_int_array_2		4		~34
+printf ~34
+printf newline
+=[]		global_char_array_1		0		~35
+printf ~35
+printf newline
+=[]		global_char_array_1		1		~36
+printf ~36
+printf newline
+=[]		global_char_array_1		2		~37
+printf ~37
+printf newline
+=[]		global_char_array_1		3		~38
+printf ~38
+printf newline
+=[]		global_char_array_1		4		~39
+printf ~39
+printf newline
+=[]		global_char_array_2		0		~40
+printf ~40
+printf newline
+=[]		global_char_array_2		1		~41
+printf ~41
+printf newline
+=[]		global_char_array_2		2		~42
+printf ~42
+printf newline
+=[]		global_char_array_2		3		~43
+printf ~43
+printf newline
+=[]		global_char_array_2		4		~44
+printf ~44
+printf newline
+func printGlobalArray -> NonRetreturn
+func printGlobalArray -> NonRetreturn
+func testGlobal()
+call initGlobalArray
+func initGlobalArray()
+[]=		0		0		global_int_array_1
+[]=		1		1		global_int_array_1
+=[]		global_int_array_1		0		~10
+=[]		global_int_array_1		1		~11
++		~10		~11		~11
+[]=		~11		2		global_int_array_1
+=[]		global_int_array_1		2		~12
+=[]		global_int_array_1		1		~13
++		~12		~13		~13
+[]=		~13		3		global_int_array_1
+=[]		global_int_array_1		3		~14
+=[]		global_int_array_1		2		~15
++		~14		~15		~15
+[]=		~15		4		global_int_array_1
+=[]		global_int_array_1		1		~16
+[]=		~16		0		global_int_array_2
+=[]		global_int_array_2		0		~17
+=[]		global_int_array_1		2		~18
+*		~17		~18		~18
+[]=		~18		1		global_int_array_2
+=[]		global_int_array_2		1		~19
+=[]		global_int_array_1		3		~20
+*		~19		~20		~20
+[]=		~20		2		global_int_array_2
+=[]		global_int_array_2		2		~21
+=[]		global_int_array_1		4		~22
+*		~21		~22		~22
+[]=		~22		3		global_int_array_2
+=[]		global_int_array_2		3		~23
+=[]		global_int_array_1		4		~24
+/		~23		~24		~24
+[]=		~24		4		global_int_array_2
+[]=		'a'		0		global_char_array_1
+[]=		'A'		1		global_char_array_1
+[]=		'z'		2		global_char_array_1
+[]=		'Z'		3		global_char_array_1
+[]=		'_'		4		global_char_array_1
+[]=		'+'		0		global_char_array_2
+[]=		'-'		1		global_char_array_2
+[]=		'*'		2		global_char_array_2
+[]=		'/'		3		global_char_array_2
+[]=		'6'		4		global_char_array_2
+func initGlobalArray -> NonRetreturn
+protect env
+push 12345679
+push '9'
+push -12345679
+push '*'
+call assignGlobal
+func assignGlobal()
+para in func: a
+para in func: b
+para in func: c
+para in func: d
+=		a		global_int_1
+=		b		global_char_1
+=		c		global_int_2
+=		d		global_char_2
+func assignGlobal -> NonRetreturn
+call printGlobalConst
+func printGlobalConst()
+printf 12345679
+printf newline
+printf 0
+printf newline
+printf 0
+printf newline
+printf -12345679
+printf newline
+printf '9'
+printf newline
+printf '_'
+printf newline
+printf '+'
+printf newline
+printf '*'
+printf newline
+func printGlobalConst -> NonRetreturn
+call printGlobalVar
+func printGlobalVar()
+printf global_int_1
+printf newline
+printf global_int_2
+printf newline
+printf global_char_1
+printf newline
+printf global_char_2
+printf newline
+func printGlobalVar -> NonRetreturn
+call printGlobalArray
+func printGlobalArray()
+=[]		global_int_array_1		0		~25
+printf ~25
+printf newline
+=[]		global_int_array_1		1		~26
+printf ~26
+printf newline
+=[]		global_int_array_1		2		~27
+printf ~27
+printf newline
+=[]		global_int_array_1		3		~28
+printf ~28
+printf newline
+=[]		global_int_array_1		4		~29
+printf ~29
+printf newline
+=[]		global_int_array_2		0		~30
+printf ~30
+printf newline
+=[]		global_int_array_2		1		~31
+printf ~31
+printf newline
+=[]		global_int_array_2		2		~32
+printf ~32
+printf newline
+=[]		global_int_array_2		3		~33
+printf ~33
+printf newline
+=[]		global_int_array_2		4		~34
+printf ~34
+printf newline
+=[]		global_char_array_1		0		~35
+printf ~35
+printf newline
+=[]		global_char_array_1		1		~36
+printf ~36
+printf newline
+=[]		global_char_array_1		2		~37
+printf ~37
+printf newline
+=[]		global_char_array_1		3		~38
+printf ~38
+printf newline
+=[]		global_char_array_1		4		~39
+printf ~39
+printf newline
+=[]		global_char_array_2		0		~40
+printf ~40
+printf newline
+=[]		global_char_array_2		1		~41
+printf ~41
+printf newline
+=[]		global_char_array_2		2		~42
+printf ~42
+printf newline
+=[]		global_char_array_2		3		~43
+printf ~43
+printf newline
+=[]		global_char_array_2		4		~44
+printf ~44
+printf newline
+func printGlobalArray -> NonRetreturn
+func testGlobal -> NonRetreturn
+func testGlobal -> NonRetreturn
+func testReturnInt()
+para in func: a
++		a		1		~45
+func testReturnInt -> Retreturn  retValue:~45
+func testReturnChar()
+para in func: a
+bne		a		1		if_4_end
+func testReturnChar -> Retreturn  retValue:'a'
+j else_4_end
+Label if_4_end
+bne		a		2		if_5_end
+func testReturnChar -> Retreturn  retValue:'b'
+j else_5_end
+Label if_5_end
+bne		a		3		if_6_end
+func testReturnChar -> Retreturn  retValue:'c'
+Label if_6_end
+Label else_5_end
+Label else_4_end
+func testReturnChar -> Retreturn  retValue:'_'
+func testReturn()
+protect env
+push 3
+call fac
+FunRet_~46 = retValue
+protect env
+push 2
+call fac
+FunRet_~47 = retValue
++		FunRet_~46		FunRet_~47		~48
+protect env
+push ~48
+call Fibonacci
+FunRet_~49 = retValue
+protect env
+push FunRet_~49
+call testReturnInt
+func testReturnInt()
+para in func: a
++		a		1		~45
+func testReturnInt -> Retreturn  retValue:~45
+FunRet_~50 = retValue
+printf FunRet_~50
+printf newline
+protect env
+push 1
+call testReturnChar
+FunRet_~51 = retValue
+printf FunRet_~51
+printf newline
+protect env
+push 2
+call testReturnChar
+FunRet_~52 = retValue
+printf FunRet_~52
+printf newline
+protect env
+push 3
+call testReturnChar
+FunRet_~53 = retValue
+printf FunRet_~53
+printf newline
+protect env
+push 4
+call testReturnChar
+FunRet_~54 = retValue
+printf FunRet_~54
+printf newline
+func testReturn -> NonRetreturn
+func testReturn -> NonRetreturn
+func testAssignAndExp()
+protect env
+push 5
+call Fibonacci
+FunRet_~55 = retValue
+protect env
+push FunRet_~55
+call Fibonacci
+FunRet_~56 = retValue
+protect env
+push FunRet_~56
+call Fibonacci
+FunRet_~57 = retValue
++		FunRet_~57		0		~58
+protect env
+push 3
+call fac
+FunRet_~59 = retValue
+/		~58		FunRet_~59		~58
++		~58		1		int_temp_1
+protect env
+push 3
+call fac
+FunRet_~60 = retValue
+protect env
+push 2
+call fac
+FunRet_~61 = retValue
++		FunRet_~60		FunRet_~61		~62
+protect env
+push ~62
+call fac
+FunRet_~63 = retValue
+=		FunRet_~63		int_temp_2
+protect env
+push 0
+call testReturnInt
+func testReturnInt()
+para in func: a
++		a		1		~45
+func testReturnInt -> Retreturn  retValue:~45
+FunRet_~64 = retValue
+[]=		FunRet_~64		0		int_array
+protect env
+push 0
+call testReturnInt
+func testReturnInt()
+para in func: a
++		a		1		~45
+func testReturnInt -> Retreturn  retValue:~45
+FunRet_~65 = retValue
+*		FunRet_~65		-12345679		~66
++		~66		12345679		~66
+-		1		~66		~66
+protect env
+push 1
+call testReturnInt
+func testReturnInt()
+para in func: a
++		a		1		~45
+func testReturnInt -> Retreturn  retValue:~45
+FunRet_~67 = retValue
++		FunRet_~67		1		~68
+[]=		~68		~66		int_array
+=[]		int_array		0		~69
+protect env
+push 0
+call testReturnInt
+func testReturnInt()
+para in func: a
++		a		1		~45
+func testReturnInt -> Retreturn  retValue:~45
+FunRet_~70 = retValue
+*		FunRet_~70		-12345679		~71
++		~71		12345679		~71
+-		1		~71		~71
+=[]		int_array		~71		~71
+*		~71		1		~71
+-		~69		~71		int_temp_3
+=[]		int_array		0		~72
+protect env
+push ~72
+call testReturnChar
+FunRet_~73 = retValue
+[]=		FunRet_~73		0		char_array
+protect env
+push 0
+call testReturnInt
+func testReturnInt()
+para in func: a
++		a		1		~45
+func testReturnInt -> Retreturn  retValue:~45
+FunRet_~74 = retValue
+*		FunRet_~74		-12345679		~75
++		~75		12345679		~75
+-		1		~75		~75
+=[]		int_array		1		~76
++		~76		1		~76
+protect env
+push ~76
+call testReturnChar
+FunRet_~77 = retValue
+[]=		FunRet_~77		~75		char_array
+=[]		char_array		0		~78
+=		~78		char_temp_1
+protect env
+push 0
+call testReturnInt
+func testReturnInt()
+para in func: a
++		a		1		~45
+func testReturnInt -> Retreturn  retValue:~45
+FunRet_~79 = retValue
+*		FunRet_~79		-12345679		~80
++		~80		12345679		~80
+-		1		~80		~80
+=[]		char_array		~80		~80
+=		~80		char_temp_2
+printf int_temp_1
+printf newline
+printf int_temp_2
+printf newline
+printf int_temp_3
+printf newline
+=[]		int_array		0		~81
+printf ~81
+printf newline
+protect env
+push 0
+call testReturnInt
+func testReturnInt()
+para in func: a
++		a		1		~45
+func testReturnInt -> Retreturn  retValue:~45
+FunRet_~82 = retValue
+*		FunRet_~82		-12345679		~83
++		~83		12345679		~83
+-		1		~83		~83
+=[]		int_array		~83		~83
+printf ~83
+printf newline
+printf char_temp_1
+printf newline
+printf char_temp_2
+printf newline
+=[]		char_array		0		~84
+printf ~84
+printf newline
+=[]		char_array		1		~85
+printf ~85
+printf newline
+=[]		char_array		0		~86
+=[]		char_array		0		~87
+*		~87		char_temp_2		~87
++		~86		~87		~87
+*		char_temp_1		~87		~87
+printf ~87
+printf newline
+func testAssignAndExp -> NonRetreturn
+func testAssignAndExp -> NonRetreturn
+func testIO()
+scanf global_int_1
+scanf global_char_1
+printf string3
+printf newline
+printf global_int_1
+printf newline
+printf global_char_1
+printf newline
+scanf global_int_1
+scanf global_char_1
+printf string4
+printf global_int_1
+printf newline
+printf global_char_1
+printf newline
+scanf global_char_1
+scanf global_int_1
+printf string5
+printf global_char_1
+printf newline
+printf global_int_1
+printf newline
+func testIO -> NonRetreturn
+func testIO -> NonRetreturn
+func testIfWhile()
+=		10		k
+=		'+'		a
+=		'-'		b
+=		'*'		c
+=		'/'		d
+ble		k		0		if_7_end
+bgt		k		10		if_8_end
+=		0		i
+Label while_0_begin
+/		k		2		~88
+bge		i		~88		while_0_end
+%		i		2		~89
+bne		~89		0		if_9_end
+[]=		a		i		global_char_array_3
+j else_9_end
+Label if_9_end
+%		i		2		~90
+bne		~90		1		if_10_end
+[]=		b		i		global_char_array_3
+Label if_10_end
+Label else_9_end
+=[]		global_char_array_3		i		~91
+printf ~91
+printf newline
++		i		1		i
+j while_0_begin
+Label while_0_end
+Label while_1_begin
+bge		i		k		while_1_end
+%		i		2		~93
+bne		~93		0		if_11_end
+[]=		c		i		global_char_array_3
+j else_11_end
+Label if_11_end
+[]=		d		i		global_char_array_3
+Label else_11_end
+=[]		global_char_array_3		i		~94
+printf ~94
+printf newline
++		i		1		i
+j while_1_begin
+Label while_1_end
+Label if_8_end
+Label if_7_end
+func testIfWhile -> NonRetreturn
+func testIfWhile -> NonRetreturn
+func func_ret_int_1()
+para in func: i_1
+para in func: i_2
+para in func: c_1
+para in func: c_2
+printf string6
+printf newline
+printf i_1
+printf newline
+printf i_2
+printf newline
+printf c_1
+printf newline
+printf c_2
+printf newline
+=		i_1		i_temp
+=		i_2		i_1
+=		i_temp		i_2
+=		c_1		c_temp
+=		c_2		c_1
+=		c_temp		c_2
+printf string7
+printf newline
+printf i_1
+printf newline
+printf i_2
+printf newline
+printf c_1
+printf newline
+printf c_2
+printf newline
+func func_ret_int_1 -> Retreturn  retValue:i_1
+func testPara()
+=		12345679		i
+=		-12345679		j
+=		'A'		c
+=		'Z'		d
+protect env
+push i
+push j
+push c
+push d
+call func_ret_int_1
+func func_ret_int_1()
+para in func: i_1
+para in func: i_2
+para in func: c_1
+para in func: c_2
+printf string6
+printf newline
+printf i_1
+printf newline
+printf i_2
+printf newline
+printf c_1
+printf newline
+printf c_2
+printf newline
+=		i_1		i_temp
+=		i_2		i_1
+=		i_temp		i_2
+=		c_1		c_temp
+=		c_2		c_1
+=		c_temp		c_2
+printf string7
+printf newline
+printf i_1
+printf newline
+printf i_2
+printf newline
+printf c_1
+printf newline
+printf c_2
+printf newline
+func func_ret_int_1 -> Retreturn  retValue:i_1
+FunRet_~96 = retValue
+printf FunRet_~96
+printf newline
+func testPara -> NonRetreturn
+func testPara -> NonRetreturn
+func testRecursion()
+protect env
+push 2
+call fac
+FunRet_~97 = retValue
+protect env
+push 3
+call fac
+FunRet_~98 = retValue
+*		FunRet_~97		FunRet_~98		~99
+protect env
+push ~99
+call Fibonacci
+FunRet_~100 = retValue
+protect env
+push 3
+call Fibonacci
+FunRet_~101 = retValue
+protect env
+push 4
+call Fibonacci
+FunRet_~102 = retValue
++		FunRet_~101		FunRet_~102		~103
+protect env
+push ~103
+call fac
+FunRet_~104 = retValue
+-		FunRet_~100		FunRet_~104		~105
+protect env
+push 2
+call Fibonacci
+FunRet_~106 = retValue
+protect env
+push 3
+call Fibonacci
+FunRet_~107 = retValue
++		FunRet_~106		FunRet_~107		~108
+protect env
+push ~108
+call fac
+FunRet_~109 = retValue
+/		~105		FunRet_~109		~105
+protect env
+push ~105
+push 'a'
+push 'b'
+push 'c'
+call hanoi
+func testRecursion -> NonRetreturn
+func testRecursion -> NonRetreturn
+func main()
+printf string8
+printf newline
+printf string9
+printf newline
+call testRecursion
+printf string10
+printf newline
+printf string11
+printf newline
+call testGlobal
+printf string12
+printf newline
+printf string13
+printf newline
+call testReturn
+printf string14
+printf newline
+printf string15
+printf newline
+call testIO
+func testIO()
+scanf global_int_1
+scanf global_char_1
+printf string3
+printf newline
+printf global_int_1
+printf newline
+printf global_char_1
+printf newline
+scanf global_int_1
+scanf global_char_1
+printf string4
+printf global_int_1
+printf newline
+printf global_char_1
+printf newline
+scanf global_char_1
+scanf global_int_1
+printf string5
+printf global_char_1
+printf newline
+printf global_int_1
+printf newline
+func testIO -> NonRetreturn
+printf string16
+printf newline
+printf string17
+printf newline
+call testAssignAndExp
+printf string18
+printf newline
+printf string19
+printf newline
+call testIfWhile
+printf string20
+printf newline
+printf string21
+printf newline
+call testPara
+printf string22
+printf newline
+func main -> NonRetreturn
+func main -> NonRetreturn
+Label end

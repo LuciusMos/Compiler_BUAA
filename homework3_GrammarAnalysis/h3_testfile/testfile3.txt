@@ -1,0 +1,12 @@
+int l;
+void main(){
+	const char zero_0 = '0';
+	char u,i;
+	int m,M123we,ZERO,ONE;
+	M123we = 30;ZERO=0;ONE=1;
+	scanf(u,i,m);
+	printf("@####whether u is greater than m ? %d\n####@",M123we-m);
+	printf("u-m>=0?ZERO,ONE");
+	u = zero_0;
+	return;
+}
